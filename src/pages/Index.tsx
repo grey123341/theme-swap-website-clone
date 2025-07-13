@@ -33,11 +33,11 @@ const Index = () => {
   ];
 
   const keyFeatures = [
+    "Choose your desired deadline",
+    "Experts with years of Experience", 
     "No data will be stored in the repository",
-    "Fastest Delivery [within 30 mins*]",
-    "Lowest Price Guaranteed", 
-    "100% Confidential",
-    "Highlighted Plagiarised Content"
+    "Plagiarism Report after the work is done",
+    "No softwares are used to reduce the Plagiarism"
   ];
 
   return (
@@ -75,32 +75,24 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
-          {/* Left Section - Plagiarism Report Service */}
+          {/* Left Section - Service Description */}
           <div className="space-y-8">
             <div className="space-y-6">
               <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                India's Fastest Plagiarism Report Service
+                Manual Plagiarism Removal
               </Badge>
               
               <h2 className="text-4xl font-bold text-foreground leading-tight">
-                24*7 Plagiarism Report
+                Manual Plagiarism Removal
               </h2>
               
-              <h3 className="text-2xl font-semibold text-primary">
-                Plagiarism Check Report Cheapest Price
-              </h3>
-              
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We provide authentic and original plagiarism reports for all types of documents, thesis, papers, dissertations etc.
-              </p>
-              
-              <p className="text-lg font-medium text-foreground">
-                The service is available 24*7 and you can submit documents anytime of the day.
+                Struggling with a high plagiarism score? Don't let plagiarism stand in the way of your academic success! Our team of 27 PhD experts specializes in reducing plagiarism to less than 10%.
               </p>
               
               <div className="bg-gradient-primary p-6 rounded-lg shadow-elegant">
                 <p className="text-center text-primary-foreground font-semibold text-lg">
-                  Get your report in just 2 to 30 minutes!
+                  Now with up to 20% Concession! Same-day project delivery is available!
                 </p>
               </div>
             </div>
@@ -127,24 +119,24 @@ const Index = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center space-y-2">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Clock className="w-6 h-6 text-primary" />
+                  <Users className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">24*7</div>
-                <div className="text-sm text-muted-foreground">Available</div>
+                <div className="text-2xl font-bold text-foreground">27+</div>
+                <div className="text-sm text-muted-foreground">PhD Experts</div>
               </div>
               <div className="text-center space-y-2">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">30min</div>
-                <div className="text-sm text-muted-foreground">Fastest</div>
+                <div className="text-2xl font-bold text-foreground">&lt;10%</div>
+                <div className="text-sm text-muted-foreground">Plagiarism</div>
               </div>
               <div className="text-center space-y-2">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Users className="w-6 h-6 text-primary" />
+                  <Clock className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">100%</div>
-                <div className="text-sm text-muted-foreground">Confidential</div>
+                <div className="text-2xl font-bold text-foreground">24h</div>
+                <div className="text-sm text-muted-foreground">Delivery</div>
               </div>
             </div>
           </div>
@@ -154,7 +146,7 @@ const Index = () => {
             <CardHeader>
               <CardTitle className="text-2xl text-foreground">Upload Your Document</CardTitle>
               <p className="text-muted-foreground">
-                Add your project (docx, doc, pdf file/s) to receive your plagiarism report
+                Add your project (docx, doc, pdf file/s) to receive your quotation mail
               </p>
             </CardHeader>
             <CardContent className="space-y-6">
