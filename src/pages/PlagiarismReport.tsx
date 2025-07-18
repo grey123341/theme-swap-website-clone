@@ -8,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award } from "lucide-react";
 import { Link } from "react-router-dom";
+import PricingSection from "@/components/PricingSection";
 
 const PlagiarismReport = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -287,6 +288,9 @@ const PlagiarismReport = () => {
           </Card>
         </div>
       </div>
+
+      {/* Pricing Section */}
+      <PricingSection />
     </div>
   );
 };
