@@ -9,7 +9,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award } from "lucide-react";
 import { Link } from "react-router-dom";
-import PricingSection from "@/components/PricingSection";
 
 const Index = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -54,7 +53,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-foreground">RESEARCH</h1>
-                <p className="text-sm text-primary font-semibold">ASSISTENCE</p>
+                <p className="text-sm text-primary font-semibold">EXPERTS</p>
               </div>
             </Link>
             
@@ -288,9 +287,6 @@ const Index = () => {
           </Card>
         </div>
       </div>
-
-      {/* Pricing Section */}
-      <PricingSection />
     </div>
   );
 };

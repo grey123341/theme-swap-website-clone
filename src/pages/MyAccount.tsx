@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { FileText, User, Settings, History, Download, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
-import PricingSection from "@/components/PricingSection";
 
 const MyAccount = () => {
   const [email, setEmail] = useState("");
@@ -264,9 +263,6 @@ const MyAccount = () => {
           </Tabs>
         </div>
       </div>
-
-      {/* Pricing Section */}
-      <PricingSection />
     </div>
   );
 };

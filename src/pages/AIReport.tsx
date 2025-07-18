@@ -8,7 +8,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
-import PricingSection from "@/components/PricingSection";
 
 const AIReport = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -288,9 +287,6 @@ const AIReport = () => {
           </Card>
         </div>
       </div>
-
-      {/* Pricing Section */}
-      <PricingSection />
     </div>
   );
 };
