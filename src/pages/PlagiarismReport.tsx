@@ -4,13 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Index = () => {
+const PlagiarismReport = () => {
   const [selectedService, setSelectedService] = useState("");
   const [pages, setPages] = useState("");
   const [language, setLanguage] = useState("");
@@ -22,23 +21,20 @@ const Index = () => {
 
   const services = [
     "Plagiarism Check",
-    "AI Report", 
-    "Drillbit Report",
-    "Plagiarism Removal",
-    "AI Reduction",
-    "Document Formatting",
-    "Proofreading",
-    "Grammar Correction",
-    "Presentation Making",
-    "Citation Formatting"
+    "Turnitin Report",
+    "Similarity Report",
+    "Academic Integrity Check",
+    "Citation Analysis",
+    "Reference Verification"
   ];
 
   const keyFeatures = [
-    "Choose your desired deadline",
-    "Experts with years of Experience", 
-    "No data will be stored in the repository",
-    "Plagiarism Report after the work is done",
-    "No softwares are used to reduce the Plagiarism"
+    "Detailed Turnitin plagiarism report",
+    "24*7 availability for urgent requests",
+    "Professional academic experts",
+    "Confidential and secure process",
+    "Fastest 30-minute delivery",
+    "Comprehensive similarity analysis"
   ];
 
   return (
@@ -58,10 +54,10 @@ const Index = () => {
             </Link>
             
             <nav className="hidden md:flex items-center space-x-6">
-              <Button asChild variant="ghost" className="text-primary">
+              <Button asChild variant="ghost">
                 <Link to="/plagiarism-removal">Plagiarism Removal</Link>
               </Button>
-              <Button asChild variant="ghost">
+              <Button asChild variant="ghost" className="text-primary">
                 <Link to="/plagiarism-report">Plagiarism Report</Link>
               </Button>
               <Button asChild variant="ghost">
@@ -90,20 +86,24 @@ const Index = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                Manual Plagiarism Removal
+                24*7 Plagiarism Report
               </Badge>
               
               <h2 className="text-4xl font-bold text-foreground leading-tight">
-                Manual Plagiarism Removal
+                24*7 Plagiarism Report
               </h2>
               
+              <h3 className="text-xl font-semibold text-primary">
+                Plagiarism Check Report Cheapest Price
+              </h3>
+              
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Struggling with a high plagiarism score? Don't let plagiarism stand in the way of your academic success! Our team of 27 PhD experts specializes in reducing plagiarism to less than 10%.
+                Get instant and comprehensive plagiarism reports with our professional Turnitin checking service. Our experts provide detailed similarity reports to ensure your academic integrity and help you understand exactly where improvements are needed.
               </p>
               
               <div className="bg-gradient-primary p-6 rounded-lg shadow-elegant">
                 <p className="text-center text-primary-foreground font-semibold text-lg">
-                  Now with up to 20% Concession! Same-day project delivery is available!
+                  Fastest delivery in just 30 minutes! Available 24/7 for your urgent needs!
                 </p>
               </div>
             </div>
@@ -130,24 +130,24 @@ const Index = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center space-y-2">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-2xl font-bold text-foreground">24*7</div>
+                <div className="text-sm text-muted-foreground">Available</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">27+</div>
-                <div className="text-sm text-muted-foreground">PhD Experts</div>
+                <div className="text-2xl font-bold text-foreground">30min</div>
+                <div className="text-sm text-muted-foreground">Fastest</div>
               </div>
               <div className="text-center space-y-2">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">&lt;10%</div>
-                <div className="text-sm text-muted-foreground">Plagiarism</div>
-              </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">24h</div>
-                <div className="text-sm text-muted-foreground">Delivery</div>
+                <div className="text-2xl font-bold text-foreground">100%</div>
+                <div className="text-sm text-muted-foreground">Confidential</div>
               </div>
             </div>
           </div>
@@ -155,9 +155,9 @@ const Index = () => {
           {/* Right Section - Upload Form */}
           <Card className="shadow-elegant border-border/50">
             <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Upload Your Document</CardTitle>
+              <CardTitle className="text-2xl text-foreground">Get Plagiarism Report</CardTitle>
               <p className="text-muted-foreground">
-                Add your project (docx, doc, pdf file/s) to receive your quotation mail
+                Upload your document to receive a detailed plagiarism report
               </p>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -281,7 +281,7 @@ const Index = () => {
               </div>
 
               <Button className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3">
-                Submit
+                Get Report
               </Button>
             </CardContent>
           </Card>
@@ -291,4 +291,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default PlagiarismReport;

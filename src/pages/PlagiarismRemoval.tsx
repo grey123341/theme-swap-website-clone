@@ -4,13 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Index = () => {
+const PlagiarismRemoval = () => {
   const [selectedService, setSelectedService] = useState("");
   const [pages, setPages] = useState("");
   const [language, setLanguage] = useState("");
@@ -21,9 +20,6 @@ const Index = () => {
   const [country, setCountry] = useState("India");
 
   const services = [
-    "Plagiarism Check",
-    "AI Report", 
-    "Drillbit Report",
     "Plagiarism Removal",
     "AI Reduction",
     "Document Formatting",
@@ -291,4 +287,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default PlagiarismRemoval;
