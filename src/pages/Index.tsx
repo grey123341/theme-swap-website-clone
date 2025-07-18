@@ -53,7 +53,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-foreground">RESEARCH</h1>
-                <p className="text-sm text-primary font-semibold">EXPERTS</p>
+                <p className="text-sm text-primary font-semibold">ASSISTENCE</p>
               </div>
             </Link>
             
