@@ -88,9 +88,6 @@ const About = () => {
               <Button asChild variant="ghost" className="text-primary">
                 <Link to="/about">About Us</Link>
               </Button>
-              <Button asChild variant="ghost">
-                <Link to="/my-account">My Account</Link>
-              </Button>
             </nav>
             
             <div className="text-sm text-muted-foreground">

@@ -90,11 +90,6 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-foreground">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/my-account" className="text-muted-foreground hover:text-primary transition-colors">
-                  My Account
-                </Link>
-              </li>
-              <li>
                 <span className="text-muted-foreground cursor-pointer hover:text-primary transition-colors">
                   Privacy Policy
                 </span>
