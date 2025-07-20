@@ -71,6 +71,9 @@ const Index = () => {
                 <Link to="/drillbit-report">Drillbit Report</Link>
               </Button>
               <Button asChild variant="ghost">
+                <Link to="/about">About Us</Link>
+              </Button>
+              <Button asChild variant="ghost">
                 <Link to="/my-account">My Account</Link>
               </Button>
             </nav>
