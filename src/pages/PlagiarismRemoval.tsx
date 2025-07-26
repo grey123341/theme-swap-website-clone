@@ -68,15 +68,15 @@ const PlagiarismRemoval = () => {
                 <Link to="/drillbit-report">Drillbit Report</Link>
               </Button>
               <Button asChild variant="ghost">
-                <Link to="/about">About Us</Link>
+                <Link to="/pricing">Pricing</Link>
               </Button>
               <Button asChild variant="ghost">
-                <Link to="/pricing">Pricing</Link>
+                <Link to="/about">About Us</Link>
               </Button>
             </nav>
             
             <div className="text-sm text-muted-foreground">
-              help@researchexperts.in / (+91)896-857-2273
+              help@researchassistant.in / (+91)896-857-2273
             </div>
           </div>
         </div>

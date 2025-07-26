@@ -73,7 +73,7 @@ const About = () => {
             </Link>
             
             <nav className="hidden md:flex items-center space-x-6">
-              <Button asChild variant="ghost">
+              <Button asChild variant="ghost" className="text-primary">
                 <Link to="/plagiarism-removal">Plagiarism Removal</Link>
               </Button>
               <Button asChild variant="ghost">
@@ -85,16 +85,16 @@ const About = () => {
               <Button asChild variant="ghost">
                 <Link to="/drillbit-report">Drillbit Report</Link>
               </Button>
-              <Button asChild variant="ghost" className="text-primary">
-                <Link to="/about">About Us</Link>
-              </Button>
               <Button asChild variant="ghost">
                 <Link to="/pricing">Pricing</Link>
+              </Button>
+              <Button asChild variant="ghost">
+                <Link to="/about">About Us</Link>
               </Button>
             </nav>
             
             <div className="text-sm text-muted-foreground">
-              help@researchexperts.in / (+91)896-857-2273
+              help@researchassistant.in / (+91)896-857-2273
             </div>
           </div>
         </div>

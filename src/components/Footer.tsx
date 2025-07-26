@@ -15,7 +15,7 @@ const Footer = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-foreground">RESEARCH</h1>
-                <p className="text-sm text-primary font-semibold">EXPERTS</p>
+                <p className="text-sm text-primary font-semibold">ASSISTANT</p>
               </div>
             </div>
             <p className="text-muted-foreground">
@@ -68,7 +68,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">help@researchexperts.in</span>
+                <span className="text-muted-foreground">help@researchassistant.in</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
@@ -122,7 +122,7 @@ const Footer = () => {
         <div className="border-t border-border mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © 2024 Research Experts. All rights reserved.
+              © 2025 Research Assistant. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <span className="text-sm text-muted-foreground">Secure Payment</span>
