@@ -105,6 +105,11 @@ const Footer = () => {
                 </span>
               </li>
               <li>
+                <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
+                  Pricing
+                </Link>
+              </li>
+              <li>
                 <span className="text-muted-foreground cursor-pointer hover:text-primary transition-colors">
                   Support
                 </span>

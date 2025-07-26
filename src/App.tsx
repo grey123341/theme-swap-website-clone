@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
+import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import PlagiarismRemoval from "./pages/PlagiarismRemoval";
 import PlagiarismReport from "./pages/PlagiarismReport";
@@ -24,6 +25,7 @@ const App = () => (
           <div className="flex-1">
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
               <Route path="/plagiarism-removal" element={<PlagiarismRemoval />} />
               <Route path="/plagiarism-report" element={<PlagiarismReport />} />

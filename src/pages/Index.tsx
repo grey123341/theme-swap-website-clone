@@ -74,6 +74,9 @@ const Index = () => {
               <Button asChild variant="ghost">
                 <Link to="/about">About Us</Link>
               </Button>
+              <Button asChild variant="ghost">
+                <Link to="/pricing">Pricing</Link>
+              </Button>
             </nav>
             
             <div className="text-sm text-muted-foreground">
