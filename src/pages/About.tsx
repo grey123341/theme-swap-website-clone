@@ -67,8 +67,8 @@ const About = () => {
                 <FileText className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-foreground">RESEARCH</h1>
-                <p className="text-sm text-primary font-semibold">EXPERTS</p>
+                <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">RESEARCH</h1>
+                <p className="text-sm text-primary font-semibold">ASSISTANT</p>
               </div>
             </Link>
             
