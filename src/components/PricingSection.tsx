@@ -95,7 +95,7 @@ const PricingSection = ({ serviceType }: PricingProps) => {
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
             <span className="font-medium">Transparent Pricing</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
             {pricing.title}
           </h2>
           <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
