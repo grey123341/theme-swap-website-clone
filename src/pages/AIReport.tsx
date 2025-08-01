@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 import PricingSection from "@/components/PricingSection";
+import FeaturesSection from "@/components/FeaturesSection";
 
 const AIReport = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -292,6 +293,7 @@ const AIReport = () => {
         </div>
       </div>
       
+      <FeaturesSection />
       <PricingSection serviceType="ai-report" />
     </div>
   );

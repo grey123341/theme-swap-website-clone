@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import PricingSection from "@/components/PricingSection";
+import FeaturesSection from "@/components/FeaturesSection";
 
 const Index = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -291,6 +292,7 @@ const Index = () => {
         </div>
       </div>
       
+      <FeaturesSection />
       <PricingSection serviceType="plagiarism-removal" />
     </div>
   );

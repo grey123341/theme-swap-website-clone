@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award, Drill } from "lucide-react";
 import { Link } from "react-router-dom";
 import PricingSection from "@/components/PricingSection";
+import FeaturesSection from "@/components/FeaturesSection";
 
 const DrillbitReport = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -292,6 +293,7 @@ const DrillbitReport = () => {
         </div>
       </div>
       
+      <FeaturesSection />
       <PricingSection serviceType="drillbit-report" />
     </div>
   );
