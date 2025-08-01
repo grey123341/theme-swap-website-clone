@@ -5,26 +5,6 @@ import { FileText, Users, Award, Target, Heart, Star, Clock, Shield, CheckCircle
 import Navigation from "@/components/Navigation";
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: "Dr. Sarah Johnson",
-      role: "Chief Academic Officer",
-      expertise: "PhD in Literature, 15+ years experience",
-      description: "Specializes in plagiarism detection and academic integrity"
-    },
-    {
-      name: "Dr. Michael Chen",
-      role: "Lead Research Expert", 
-      expertise: "PhD in Computer Science, AI specialist",
-      description: "Expert in AI detection and document analysis"
-    },
-    {
-      name: "Dr. Emily Rodriguez",
-      role: "Quality Assurance Head",
-      expertise: "PhD in Education, 12+ years experience", 
-      description: "Ensures highest quality standards in all deliverables"
-    }
-  ];
 
   const values = [
     {
@@ -161,33 +141,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Our Team */}
-        <div className="mb-16">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl font-bold text-foreground">Meet Our Team</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Experienced professionals dedicated to your academic success
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="shadow-elegant border-border/50">
-                <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-10 h-10 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-foreground">{member.name}</CardTitle>
-                  <p className="text-primary font-semibold">{member.role}</p>
-                </CardHeader>
-                <CardContent className="text-center space-y-3">
-                  <p className="text-sm text-muted-foreground font-medium">{member.expertise}</p>
-                  <p className="text-muted-foreground">{member.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
 
         {/* Service Guarantee */}
         <Card className="shadow-elegant border-border/50 bg-gradient-primary/5">
