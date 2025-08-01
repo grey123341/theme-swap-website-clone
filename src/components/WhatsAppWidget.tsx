@@ -12,7 +12,7 @@ const WhatsAppWidget = () => {
 
   // Stop bounce after 1 second (or after animation runs few times)
   useEffect(() => {
-    const timer = setTimeout(() => setBounce(false), 1000);
+    const timer = setTimeout(() => setBounce(false), 5000);
     return () => clearTimeout(timer);
   }, []);
 
