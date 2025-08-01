@@ -7,7 +7,7 @@ const WhatsAppWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   // WhatsApp number (replace with actual number)
-  const whatsappNumber = "+925162334";
+  const whatsappNumber = "+91925162334";
   const defaultMessage = "Hi! I need help with your academic services.";
 
   const openWhatsApp = () => {
