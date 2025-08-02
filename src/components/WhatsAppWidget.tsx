@@ -11,17 +11,25 @@ const WhatsAppWidget = () => {
   const whatsappNumber = "+919251614";
   const defaultMessage = "Hi! I need help with your academic services.";
 
-  // Stop bounce after 1 second (or after animation runs few times)
+  // Stop bounce after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => setBounce(false), 5000);
     return () => clearTimeout(timer);
   }, []);
 
+  // Play sound and open WhatsApp
   const openWhatsApp = () => {
-    const audio = new Audio("/click-sound.mp3"); // <-- Place sound file in public folder
+    const audio = new Audio("/click-sound.mp3");
     audio.play();
     const url = `https://wa.me/${whatsappNumber.replace("+", "")}?text=${encodeURIComponent(defaultMessage)}`;
     window.open(url, "_blank");
+  };
+
+  // Play sound when floating widget is clicked (open/close)
+  const handleWidgetClick = () => {
+    const audio = new Audio("/click-sound.mp3");
+    audio.play();
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -95,8 +103,10 @@ const WhatsAppWidget = () => {
 
           {/* Floating Button */}
           <Button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`relative w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 ${bounce ? "animate-bounce" : ""}`}
+            onClick={handleWidgetClick}
+            className={`relative w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 ${
+              bounce ? "animate-bounce" : ""
+            }`}
             size="icon"
           >
             {isOpen ? <X className="w-6 h-6" /> : <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />}
