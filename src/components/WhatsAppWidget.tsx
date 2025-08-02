@@ -7,7 +7,7 @@ const WhatsAppWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [bounce, setBounce] = useState(true);
 
-  const whatsappNumber = "+919251612334";
+  const whatsappNumber = "+919251614";
   const defaultMessage = "Hi! I need help with your academic services.";
 
   // Stop bounce after 1 second (or after animation runs few times)
