@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { MessageCircle, X, Phone } from "lucide-react";
+import { X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import whatsappIcon from "@/assets/whatsapp-icon.svg";
 
 const WhatsAppWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +34,8 @@ const WhatsAppWidget = () => {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                      <MessageCircle className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-2">
+                      <img src={whatsappIcon} alt="WhatsApp" className="w-full h-full" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Research Assistant</h3>
@@ -76,7 +77,7 @@ const WhatsAppWidget = () => {
                     onClick={openWhatsApp}
                     className="w-full bg-green-500 hover:bg-green-600 text-white"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 mr-2" />
                     Start WhatsApp Chat
                   </Button>
                   <Button 
@@ -98,7 +99,7 @@ const WhatsAppWidget = () => {
             className={`relative w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 ${bounce ? "animate-bounce" : ""}`}
             size="icon"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6" /> : <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />}
             {!isOpen && (
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
                 <span className="text-xs text-white font-bold">1</span>
