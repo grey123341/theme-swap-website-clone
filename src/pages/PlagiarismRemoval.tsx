@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, Users, Shield, Clock, Award } from "lucide-react";
-import { Captcha } from "@/components/ui/captcha";
+import { CaptchaModal } from "@/components/ui/captcha";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import Navigation from "@/components/Navigation";
@@ -21,6 +21,7 @@ const PlagiarismRemoval = () => {
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("India");
+  const [showCaptcha, setShowCaptcha] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const services = [
@@ -40,6 +41,17 @@ const PlagiarismRemoval = () => {
     "Plagiarism Report after the work is done",
     "No softwares are used to reduce the Plagiarism"
   ];
+
+  const handleSubmit = () => {
+    setShowCaptcha(true);
+  };
+
+  const handleFormSubmit = () => {
+    // Handle actual form submission here
+    console.log("Form submitted with captcha verification");
+    setShowCaptcha(false);
+    setCaptchaToken(null);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-hero">
@@ -243,11 +255,9 @@ const PlagiarismRemoval = () => {
                 </Label>
               </div>
 
-              <Captcha onVerify={setCaptchaToken} className="flex justify-center" />
-
               <Button 
                 className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3"
-                disabled={!captchaToken}
+                onClick={handleSubmit}
               >
                 Submit
               </Button>
@@ -255,6 +265,13 @@ const PlagiarismRemoval = () => {
           </Card>
         </div>
       </div>
+      
+      <CaptchaModal
+        isOpen={showCaptcha}
+        onClose={() => setShowCaptcha(false)}
+        onVerify={setCaptchaToken}
+        onSubmit={handleFormSubmit}
+      />
       
       <FeaturesSection />
       <PricingSection serviceType="plagiarism-removal" />
