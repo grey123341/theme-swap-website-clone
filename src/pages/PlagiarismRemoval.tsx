@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, Users, Shield, Clock, Award } from "lucide-react";
+import { Captcha } from "@/components/ui/captcha";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import Navigation from "@/components/Navigation";
@@ -20,6 +21,7 @@ const PlagiarismRemoval = () => {
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("India");
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const services = [
     "Plagiarism Removal",
@@ -241,7 +243,12 @@ const PlagiarismRemoval = () => {
                 </Label>
               </div>
 
-              <Button className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3">
+              <Captcha onVerify={setCaptchaToken} className="flex justify-center" />
+
+              <Button 
+                className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3"
+                disabled={!captchaToken}
+              >
                 Submit
               </Button>
             </CardContent>

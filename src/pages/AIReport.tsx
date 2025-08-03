@@ -8,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Upload, FileText, Users, Shield, Clock, Award, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Captcha } from "@/components/ui/captcha";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import Navigation from "@/components/Navigation";
@@ -21,6 +22,7 @@ const AIReport = () => {
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("India");
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const services = [
     "AI Content Detection",
@@ -246,7 +248,12 @@ const AIReport = () => {
                 </Label>
               </div>
 
-              <Button className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3">
+              <Captcha onVerify={setCaptchaToken} className="flex justify-center" />
+
+              <Button 
+                className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3"
+                disabled={!captchaToken}
+              >
                 Get AI Report
               </Button>
             </CardContent>
