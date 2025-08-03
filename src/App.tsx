@@ -25,7 +25,7 @@ const App = () => (
         <div className="min-h-screen flex flex-col">
           <div className="flex-1">
             <Routes>
-              <Route path="/" element={<Index />} />
+              <Route path="/" element={<PlagiarismReport />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
               <Route path="/plagiarism-removal" element={<PlagiarismRemoval />} />
