@@ -55,9 +55,9 @@ const Navigation = () => {
             ))}
           </nav>
           
-          <div className="text-sm text-muted-foreground">
+          {/* <div className="text-sm text-muted-foreground">
             help@researchassistant.in / (+91)896-857-2273
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
