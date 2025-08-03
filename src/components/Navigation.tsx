@@ -6,8 +6,8 @@ const Navigation = () => {
   const location = useLocation();
 
   const navigationItems = [
-    { href: "/plagiarism-removal", label: "Plagiarism Removal" },
     { href: "/plagiarism-report", label: "Plagiarism Report" },
+    { href: "/plagiarism-removal", label: "Plagiarism Removal" },
     { href: "/ai-report", label: "AI Report" },
     { href: "/drillbit-report", label: "Drillbit Report" },
     { href: "/pricing", label: "Pricing" },
