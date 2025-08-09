@@ -25,24 +25,24 @@ const Navigation = () => {
               <FileText className="w-6 h-6 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">RESEARCH</h1>
-              <p className="text-sm text-primary font-semibold">ASSISTANT</p>
+              <h1 className="text-lg md:text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">RESEARCH</h1>
+              <p className="text-xs md:text-sm text-primary font-semibold">ASSISTANT</p>
             </div>
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-2">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navigationItems.map((item) => (
               <Button
                 key={item.href}
                 asChild
                 variant="ghost"
-                className={`transition-all duration-300 hover:bg-primary/10 hover:text-primary relative group ${
+                className={`transition-all duration-300 hover:bg-primary/10 hover:text-primary relative group text-sm lg:text-base px-2 lg:px-3 ${
                   isActive(item.href)
                     ? "text-primary bg-primary/10 border-b-2 border-primary"
                     : "text-foreground hover:text-primary"
                 }`}
               >
-                <Link to={item.href} className="relative px-4 py-2">
+                <Link to={item.href} className="relative px-2 py-2">
                   {item.label}
                   {/* Active indicator */}
                   <span 

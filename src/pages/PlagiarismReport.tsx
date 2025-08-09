@@ -101,31 +101,31 @@ const PlagiarismReport = () => {
   return (
     <div className="min-h-screen bg-gradient-hero">
       <Navigation />
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="container mx-auto px-4 py-6 md:py-12">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
           {/* Left Section */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+          <div className="space-y-6 md:space-y-8">
+            <div className="space-y-4 md:space-y-6">
+              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 text-xs md:text-sm">
                 24*7 Plagiarism Report
               </Badge>
 
-              <h2 className="text-4xl font-bold text-foreground leading-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-foreground leading-tight">
                 24*7 Plagiarism Report
               </h2>
 
-              <h3 className="text-xl font-semibold text-primary">
+              <h3 className="text-lg md:text-xl font-semibold text-primary">
                 Plagiarism Check Report Cheapest Price
               </h3>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                 Get instant and comprehensive plagiarism reports with our professional Turnitin checking service. 
                 Our experts provide detailed similarity reports to ensure your academic integrity and help you 
                 understand exactly where improvements are needed.
               </p>
 
-              <div className="bg-gradient-primary p-6 rounded-lg shadow-elegant">
-                <p className="text-center text-primary-foreground font-semibold text-lg">
+              <div className="bg-gradient-primary p-4 md:p-6 rounded-lg shadow-elegant">
+                <p className="text-center text-primary-foreground font-semibold text-sm md:text-lg">
                   Fastest delivery in just 30 minutes! Available 24/7 for your urgent needs!
                 </p>
               </div>
@@ -133,89 +133,89 @@ const PlagiarismReport = () => {
 
             {/* Key Features */}
             <Card className="shadow-elegant border-border/50">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-foreground">
-                  <Award className="w-5 h-5 text-primary" />
+              <CardHeader className="px-4 md:px-6">
+                <CardTitle className="flex items-center gap-2 text-foreground text-lg md:text-xl">
+                  <Award className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                   Key Features
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-3 md:space-y-4 px-4 md:px-6">
                 {keyFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-foreground">{feature}</span>
+                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                    <span className="text-foreground text-sm md:text-base">{feature}</span>
                   </div>
                 ))}
               </CardContent>
             </Card>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Clock className="w-6 h-6 text-primary" />
+            <div className="grid grid-cols-3 gap-2 md:gap-4">
+              <div className="text-center space-y-1 md:space-y-2">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Clock className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">24*7</div>
-                <div className="text-sm text-muted-foreground">Available</div>
+                <div className="text-lg md:text-2xl font-bold text-foreground">24*7</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Available</div>
               </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Users className="w-6 h-6 text-primary" />
+              <div className="text-center space-y-1 md:space-y-2">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">30min</div>
-                <div className="text-sm text-muted-foreground">Fastest</div>
+                <div className="text-lg md:text-2xl font-bold text-foreground">30min</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Fastest</div>
               </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Shield className="w-6 h-6 text-primary" />
+              <div className="text-center space-y-1 md:space-y-2">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Shield className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">100%</div>
-                <div className="text-sm text-muted-foreground">Confidential</div>
+                <div className="text-lg md:text-2xl font-bold text-foreground">100%</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Confidential</div>
               </div>
             </div>
           </div>
 
           {/* Right Section - Form */}
           <Card className="shadow-elegant border-border/50">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Get Plagiarism Report</CardTitle>
-              <p className="text-muted-foreground">
+            <CardHeader className="px-4 md:px-6">
+              <CardTitle className="text-xl md:text-2xl text-foreground">Get Plagiarism Report</CardTitle>
+              <p className="text-muted-foreground text-sm md:text-base">
                 Upload your document to receive a detailed plagiarism report
               </p>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-4 md:space-y-6 px-4 md:px-6">
               {/* Service & Pages */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="service">Choose Service *</Label>
+                  <Label htmlFor="service" className="text-sm md:text-base">Choose Service *</Label>
                   <Select value={selectedService} onValueChange={setSelectedService}>
-                    <SelectTrigger className={errors.selectedService ? "border-red-500" : ""}>
+                    <SelectTrigger className={`text-sm md:text-base ${errors.selectedService ? "border-red-500" : ""}`}>
                       <SelectValue placeholder="Choose a service" />
                     </SelectTrigger>
                     <SelectContent>
                       {services.map((service) => (
-                        <SelectItem key={service} value={service}>
+                        <SelectItem key={service} value={service} className="text-sm md:text-base">
                           {service}
                         </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
                   {errors.selectedService && (
-                    <p className="text-red-500 text-sm">{errors.selectedService}</p>
+                    <p className="text-red-500 text-xs md:text-sm">{errors.selectedService}</p>
                   )}
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="pages">No. of Pages *</Label>
+                  <Label htmlFor="pages" className="text-sm md:text-base">No. of Pages *</Label>
                   <Input
                     id="pages"
                     type="number"
                     value={pages}
                     onChange={(e) => setPages(e.target.value)}
                     placeholder="Pages"
-                    className={errors.pages ? "border-red-500" : ""}
+                    className={`text-sm md:text-base ${errors.pages ? "border-red-500" : ""}`}
                   />
-                  {errors.pages && <p className="text-red-500 text-sm">{errors.pages}</p>}
+                  {errors.pages && <p className="text-red-500 text-xs md:text-sm">{errors.pages}</p>}
                 </div>
               </div>
 
@@ -321,13 +321,13 @@ const PlagiarismReport = () => {
               </div>
 
               {/* Privacy Checkbox */}
-              <div className="flex items-center space-x-2">
-                <Checkbox id="terms" checked={privacy} onCheckedChange={setPrivacy} />
-                <Label htmlFor="terms" className="text-sm">
+              <div className="flex items-start space-x-2">
+                <Checkbox id="terms" checked={privacy} onCheckedChange={(checked) => setPrivacy(checked === true)} />
+                <Label htmlFor="terms" className="text-xs md:text-sm leading-tight">
                   I agree to the <span className="text-primary">Privacy Policy</span> and agree to the terms.
                 </Label>
               </div>
-              {errors.privacy && <p className="text-red-500 text-sm">{errors.privacy}</p>}
+              {errors.privacy && <p className="text-red-500 text-xs md:text-sm">{errors.privacy}</p>}
 
               <Button
                 className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3 disabled:opacity-50 disabled:cursor-not-allowed"

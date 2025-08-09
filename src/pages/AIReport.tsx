@@ -48,238 +48,227 @@ const AIReport = () => {
   };
 
   const handleFormSubmit = () => {
-    // Handle actual form submission here
-    console.log("Form submitted with captcha verification");
+    console.log('Form submitted:', {
+      selectedService,
+      pages,
+      language,
+      email,
+      firstName,
+      lastName,
+      phone,
+      country,
+      captchaToken
+    });
     setShowCaptcha(false);
-    setCaptchaToken(null);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-hero">
+    <div className="min-h-screen bg-background">
       <Navigation />
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          
-          {/* Left Section - Service Description */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                AI Content Detection
-              </Badge>
-              
-              <h2 className="text-4xl font-bold text-foreground leading-tight">
-                AI Content Detection Report
-              </h2>
-              
-              <h3 className="text-xl font-semibold text-primary">
-                Advanced AI Detection & Analysis
-              </h3>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Detect AI-generated content with our advanced algorithms. Our comprehensive AI detection service identifies content created by ChatGPT, GPT-4, and other AI writing tools, ensuring academic integrity and originality in your documents.
-              </p>
-              
-              <div className="bg-gradient-primary p-6 rounded-lg shadow-elegant">
-                <p className="text-center text-primary-foreground font-semibold text-lg">
-                  Accurate AI detection with detailed breakdown! Fast and reliable results!
-                </p>
-              </div>
-            </div>
-
-            {/* Key Features */}
-            <Card className="shadow-elegant border-border/50">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-foreground">
-                  <Bot className="w-5 h-5 text-primary" />
-                  Key Features
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {keyFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-foreground">{feature}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Bot className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">AI</div>
-                <div className="text-sm text-muted-foreground">Detection</div>
-              </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">Fast</div>
-                <div className="text-sm text-muted-foreground">Results</div>
-              </div>
-              <div className="text-center space-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">99%</div>
-                <div className="text-sm text-muted-foreground">Accuracy</div>
-              </div>
-            </div>
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-hero py-12 md:py-20">
+        <div className="container mx-auto px-4 py-6 md:py-12">
+          <div className="text-center mb-8 md:mb-16">
+            <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-4">AI Content Detection</h1>
+            <p className="text-sm md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Advanced AI detection service to identify artificially generated content with precision and accuracy
+            </p>
           </div>
 
-          {/* Right Section - Upload Form */}
-          <Card className="shadow-elegant border-border/50">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Get AI Detection Report</CardTitle>
-              <p className="text-muted-foreground">
-                Upload your document to check for AI-generated content
-              </p>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
+            {/* Left Column - Features */}
+            <div className="space-y-6 md:space-y-8">
+              <Card className="shadow-elegant border-border/50">
+                <CardHeader className="px-4 md:px-6">
+                  <CardTitle className="flex items-center gap-2 text-foreground text-lg md:text-xl">
+                    <Bot className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                    Why Choose Our AI Detection?
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 md:space-y-4 px-4 md:px-6">
+                  {keyFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+                      <span className="text-foreground text-sm md:text-base">{feature}</span>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+
+              {/* Stats Section */}
+              <div className="grid grid-cols-3 gap-2 md:gap-4">
+                <div className="text-center space-y-1 md:space-y-2">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Shield className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  </div>
+                  <div className="text-lg md:text-2xl font-bold text-foreground">99%</div>
+                  <div className="text-xs md:text-sm text-muted-foreground">Accurate</div>
+                </div>
+                <div className="text-center space-y-1 md:space-y-2">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Clock className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  </div>
+                  <div className="text-lg md:text-2xl font-bold text-foreground">Fast</div>
+                  <div className="text-xs md:text-sm text-muted-foreground">Results</div>
+                </div>
+                <div className="text-center space-y-1 md:space-y-2">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Award className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                  </div>
+                  <div className="text-lg md:text-2xl font-bold text-foreground">Pro</div>
+                  <div className="text-xs md:text-sm text-muted-foreground">Analysis</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Form */}
+            <Card className="shadow-elegant border-border/50">
+              <CardHeader className="px-4 md:px-6">
+                <CardTitle className="text-xl md:text-2xl text-foreground">AI Content Detection Form</CardTitle>
+                <p className="text-muted-foreground text-sm md:text-base">
+                  Submit your content for comprehensive AI detection analysis
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-4 md:space-y-6 px-4 md:px-6">
+                {/* Service Selection */}
                 <div className="space-y-2">
-                  <Label htmlFor="service" className="text-foreground">Choose Service *</Label>
+                  <Label htmlFor="service" className="text-sm md:text-base">Choose Service</Label>
                   <Select value={selectedService} onValueChange={setSelectedService}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Choose a service" />
+                    <SelectTrigger className="text-sm md:text-base">
+                      <SelectValue placeholder="Select AI detection service" />
                     </SelectTrigger>
                     <SelectContent>
                       {services.map((service) => (
-                        <SelectItem key={service} value={service}>
+                        <SelectItem key={service} value={service} className="text-sm md:text-base">
                           {service}
                         </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
                 </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="pages" className="text-foreground">No. of Pages *</Label>
-                  <Input
-                    id="pages"
-                    value={pages}
-                    onChange={(e) => setPages(e.target.value)}
-                    placeholder="Pages"
-                  />
-                </div>
-              </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="language" className="text-foreground">Document Language *</Label>
-                  <Select value={language} onValueChange={setLanguage}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Choose Language" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="english">English</SelectItem>
-                      <SelectItem value="non-english">Non-English</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="file" className="text-foreground">Choose File *</Label>
-                  <div className="border-2 border-dashed border-border rounded-lg p-4 text-center hover:border-primary/50 transition-colors cursor-pointer">
-                    <Upload className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">Click this area to upload</p>
+                {/* Pages and Language */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="pages" className="text-sm md:text-base">Number of Pages</Label>
+                    <Input
+                      id="pages"
+                      type="number"
+                      placeholder="Pages"
+                      value={pages}
+                      onChange={(e) => setPages(e.target.value)}
+                      className="text-sm md:text-base"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="language" className="text-sm md:text-base">Content Language</Label>
+                    <Select value={language} onValueChange={setLanguage}>
+                      <SelectTrigger className="text-sm md:text-base">
+                        <SelectValue placeholder="Select language" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="english" className="text-sm md:text-base">English</SelectItem>
+                        <SelectItem value="spanish" className="text-sm md:text-base">Spanish</SelectItem>
+                        <SelectItem value="french" className="text-sm md:text-base">French</SelectItem>
+                        <SelectItem value="german" className="text-sm md:text-base">German</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-foreground">Email ID *</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your.email@example.com"
-                />
-              </div>
+                {/* Personal Information */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName" className="text-sm md:text-base">First Name</Label>
+                    <Input
+                      id="firstName"
+                      placeholder="Your first name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      className="text-sm md:text-base"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName" className="text-sm md:text-base">Last Name</Label>
+                    <Input
+                      id="lastName"
+                      placeholder="Your last name"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      className="text-sm md:text-base"
+                    />
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-foreground">First name *</Label>
-                  <Input
-                    id="firstName"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    placeholder="First name"
-                  />
+                {/* Contact Information */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm md:text-base">Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="text-sm md:text-base"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone" className="text-sm md:text-base">Phone</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      placeholder="Your phone number"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="text-sm md:text-base"
+                    />
+                  </div>
                 </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-foreground">Last name</Label>
-                  <Input
-                    id="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    placeholder="Last name"
-                  />
-                </div>
-              </div>
 
-              <div className="grid grid-cols-2 gap-4">
+                {/* Country Selection */}
                 <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-foreground">Phone Number *</Label>
-                  <Input
-                    id="phone"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder="Phone number"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="country" className="text-foreground">Country</Label>
+                  <Label htmlFor="country" className="text-sm md:text-base">Country</Label>
                   <Select value={country} onValueChange={setCountry}>
-                    <SelectTrigger>
+                    <SelectTrigger className="text-sm md:text-base">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="India">India</SelectItem>
-                      <SelectItem value="United States">United States</SelectItem>
-                      <SelectItem value="United Kingdom">United Kingdom</SelectItem>
-                      <SelectItem value="Canada">Canada</SelectItem>
-                      <SelectItem value="Australia">Australia</SelectItem>
+                      <SelectItem value="India" className="text-sm md:text-base">India</SelectItem>
+                      <SelectItem value="USA" className="text-sm md:text-base">USA</SelectItem>
+                      <SelectItem value="UK" className="text-sm md:text-base">UK</SelectItem>
+                      <SelectItem value="Canada" className="text-sm md:text-base">Canada</SelectItem>
+                      <SelectItem value="Australia" className="text-sm md:text-base">Australia</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-              </div>
 
-              <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
-                <Label htmlFor="terms" className="text-sm text-muted-foreground">
-                  I have read the <span className="text-primary">Privacy Policy</span> and agree to the terms.
-                </Label>
-              </div>
-
-              <Button 
-                className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3"
-                onClick={handleSubmit}
-              >
-                Get AI Report
-              </Button>
-            </CardContent>
-          </Card>
+                {/* Submit Button */}
+                <Button
+                  onClick={handleSubmit}
+                  className="w-full bg-primary hover:bg-primary/90 text-white py-2 md:py-3 text-sm md:text-base"
+                >
+                  Submit for AI Detection
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
-      
+      </section>
+
+      {/* Features Section */}
+      <FeaturesSection />
+
+      {/* Pricing Section */}
+      <PricingSection serviceType="ai-detection" />
+
+      {/* Captcha Modal */}
       <CaptchaModal
         isOpen={showCaptcha}
         onClose={() => setShowCaptcha(false)}
-        onVerify={setCaptchaToken}
-        onSubmit={handleFormSubmit}
+        onVerify={handleFormSubmit}
       />
-      
-      <FeaturesSection />
-      <PricingSection serviceType="ai-report" />
     </div>
   );
 };
