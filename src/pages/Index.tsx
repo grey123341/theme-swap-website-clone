@@ -13,6 +13,7 @@ import { CaptchaModal } from "@/components/ui/captcha";
 import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import Navigation from "@/components/Navigation";
+import { useFormSubmission } from "@/hooks/useFormSubmission";
 
 const Index = () => {
   const [selectedService, setSelectedService] = useState("");
@@ -23,8 +24,10 @@ const Index = () => {
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("India");
+  const [file, setFile] = useState<File | null>(null);
   const [showCaptcha, setShowCaptcha] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const { submitForm, isSubmitting } = useFormSubmission();
 
   const services = [
     "Plagiarism Check",
@@ -51,11 +54,32 @@ const Index = () => {
     setShowCaptcha(true);
   };
 
-  const handleFormSubmit = () => {
-    // Handle actual form submission here
-    console.log("Form submitted with captcha verification");
+  const handleFormSubmit = async () => {
+    if (!email || !captchaToken) {
+      return;
+    }
+
+    const success = await submitForm({
+      email,
+      file: file || undefined,
+      type: 'plagiarism-removal',
+      captchaToken,
+    });
+
+    if (success) {
+      // Reset form
+      setSelectedService("");
+      setPages("");
+      setLanguage("");
+      setEmail("");
+      setFirstName("");
+      setLastName("");
+      setPhone("");
+      setFile(null);
+      setCaptchaToken(null);
+    }
+    
     setShowCaptcha(false);
-    setCaptchaToken(null);
   };
 
   return (
@@ -185,9 +209,21 @@ const Index = () => {
                 
                 <div className="space-y-2">
                   <Label htmlFor="file" className="text-foreground">Choose File *</Label>
-                  <div className="border-2 border-dashed border-border rounded-lg p-4 text-center hover:border-primary/50 transition-colors cursor-pointer">
+                  <div 
+                    className="border-2 border-dashed border-border rounded-lg p-4 text-center hover:border-primary/50 transition-colors cursor-pointer"
+                    onClick={() => document.getElementById('file-input')?.click()}
+                  >
                     <Upload className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">Click this area to upload</p>
+                    <p className="text-sm text-muted-foreground">
+                      {file ? file.name : "Click this area to upload"}
+                    </p>
+                    <input
+                      id="file-input"
+                      type="file"
+                      accept=".pdf,.doc,.docx"
+                      onChange={(e) => setFile(e.target.files?.[0] || null)}
+                      className="hidden"
+                    />
                   </div>
                 </div>
               </div>
@@ -263,8 +299,9 @@ const Index = () => {
               <Button 
                 className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3"
                 onClick={handleSubmit}
+                disabled={isSubmitting || !email || !selectedService}
               >
-                Submit
+                {isSubmitting ? "Submitting..." : "Submit"}
               </Button>
             </CardContent>
           </Card>
