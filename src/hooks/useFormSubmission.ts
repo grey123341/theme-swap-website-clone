@@ -5,7 +5,7 @@ import { useToast } from './use-toast';
 export interface FormData {
   email: string;
   file?: File;
-  type: 'plagiarism-report' | 'plagiarism-removal' | 'ai-report' | 'drillbit-report' | string;
+  type: 'plagiarism-report' | 'plagiarism-removal' | 'ai-report' | 'drillbit-report';
   captchaToken: string;
 }
 

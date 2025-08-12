@@ -59,30 +59,30 @@ const DrillbitReport = () => {
       <Navigation />
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-6 md:py-12">
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           {/* Left Section - Service Description */}
-          <div className="space-y-6 md:space-y-8">
-            <div className="space-y-4 md:space-y-6">
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 text-xs md:text-sm">
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                 Advanced Drillbit Analysis
               </Badge>
               
-              <h2 className="text-2xl md:text-4xl font-bold text-foreground leading-tight">
+              <h2 className="text-4xl font-bold text-foreground leading-tight">
                 Drillbit Deep Analysis Report
               </h2>
               
-              <h3 className="text-lg md:text-xl font-semibold text-primary">
+              <h3 className="text-xl font-semibold text-primary">
                 Comprehensive Content Drilling & Analysis
               </h3>
               
-              <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Experience the most thorough content analysis with our Drillbit technology. We drill deep into multiple databases and sources to provide you with the most comprehensive similarity and content integrity report available in the market.
               </p>
               
-              <div className="bg-gradient-primary p-4 md:p-6 rounded-lg shadow-elegant">
-                <p className="text-center text-primary-foreground font-semibold text-sm md:text-lg">
+              <div className="bg-gradient-primary p-6 rounded-lg shadow-elegant">
+                <p className="text-center text-primary-foreground font-semibold text-lg">
                   Most comprehensive analysis available! Deep drilling technology for accurate results!
                 </p>
               </div>
@@ -90,67 +90,67 @@ const DrillbitReport = () => {
 
             {/* Key Features */}
             <Card className="shadow-elegant border-border/50">
-              <CardHeader className="px-4 md:px-6">
-                <CardTitle className="flex items-center gap-2 text-foreground text-lg md:text-xl">
-                  <Drill className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-foreground">
+                  <Drill className="w-5 h-5 text-primary" />
                   Key Features
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3 md:space-y-4 px-4 md:px-6">
+              <CardContent className="space-y-4">
                 {keyFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
-                    <span className="text-foreground text-sm md:text-base">{feature}</span>
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                    <span className="text-foreground">{feature}</span>
                   </div>
                 ))}
               </CardContent>
             </Card>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-2 md:gap-4">
-              <div className="text-center space-y-1 md:space-y-2">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Drill className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Drill className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-lg md:text-2xl font-bold text-foreground">Deep</div>
-                <div className="text-xs md:text-sm text-muted-foreground">Analysis</div>
+                <div className="text-2xl font-bold text-foreground">Deep</div>
+                <div className="text-sm text-muted-foreground">Analysis</div>
               </div>
-              <div className="text-center space-y-1 md:space-y-2">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              <div className="text-center space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Users className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-lg md:text-2xl font-bold text-foreground">Multi</div>
-                <div className="text-xs md:text-sm text-muted-foreground">Database</div>
+                <div className="text-2xl font-bold text-foreground">Multi</div>
+                <div className="text-sm text-muted-foreground">Database</div>
               </div>
-              <div className="text-center space-y-1 md:space-y-2">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <Shield className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              <div className="text-center space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Shield className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-lg md:text-2xl font-bold text-foreground">100%</div>
-                <div className="text-xs md:text-sm text-muted-foreground">Thorough</div>
+                <div className="text-2xl font-bold text-foreground">100%</div>
+                <div className="text-sm text-muted-foreground">Thorough</div>
               </div>
             </div>
           </div>
 
           {/* Right Section - Upload Form */}
           <Card className="shadow-elegant border-border/50">
-            <CardHeader className="px-4 md:px-6">
-              <CardTitle className="text-xl md:text-2xl text-foreground">Get Drillbit Report</CardTitle>
-              <p className="text-muted-foreground text-sm md:text-base">
+            <CardHeader>
+              <CardTitle className="text-2xl text-foreground">Get Drillbit Report</CardTitle>
+              <p className="text-muted-foreground">
                 Upload your document for comprehensive drillbit analysis
               </p>
             </CardHeader>
-            <CardContent className="space-y-4 md:space-y-6 px-4 md:px-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <CardContent className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="service" className="text-foreground text-sm md:text-base">Choose Service *</Label>
+                  <Label htmlFor="service" className="text-foreground">Choose Service *</Label>
                   <Select value={selectedService} onValueChange={setSelectedService}>
-                    <SelectTrigger className="text-sm md:text-base">
+                    <SelectTrigger>
                       <SelectValue placeholder="Choose a service" />
                     </SelectTrigger>
                     <SelectContent>
                       {services.map((service) => (
-                        <SelectItem key={service} value={service} className="text-sm md:text-base">
+                        <SelectItem key={service} value={service}>
                           {service}
                         </SelectItem>
                       ))}
@@ -159,100 +159,95 @@ const DrillbitReport = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="pages" className="text-foreground text-sm md:text-base">No. of Pages *</Label>
+                  <Label htmlFor="pages" className="text-foreground">No. of Pages *</Label>
                   <Input
                     id="pages"
                     value={pages}
                     onChange={(e) => setPages(e.target.value)}
                     placeholder="Pages"
-                    className="text-sm md:text-base"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="language" className="text-foreground text-sm md:text-base">Document Language *</Label>
+                  <Label htmlFor="language" className="text-foreground">Document Language *</Label>
                   <Select value={language} onValueChange={setLanguage}>
-                    <SelectTrigger className="text-sm md:text-base">
+                    <SelectTrigger>
                       <SelectValue placeholder="Choose Language" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="english" className="text-sm md:text-base">English</SelectItem>
-                      <SelectItem value="non-english" className="text-sm md:text-base">Non-English</SelectItem>
+                      <SelectItem value="english">English</SelectItem>
+                      <SelectItem value="non-english">Non-English</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="file" className="text-foreground text-sm md:text-base">Choose File *</Label>
-                  <div className="border-2 border-dashed border-border rounded-lg p-3 md:p-4 text-center hover:border-primary/50 transition-colors cursor-pointer">
-                    <Upload className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground mx-auto mb-1 md:mb-2" />
-                    <p className="text-xs md:text-sm text-muted-foreground">Click this area to upload</p>
+                  <Label htmlFor="file" className="text-foreground">Choose File *</Label>
+                  <div className="border-2 border-dashed border-border rounded-lg p-4 text-center hover:border-primary/50 transition-colors cursor-pointer">
+                    <Upload className="w-6 h-6 text-muted-foreground mx-auto mb-2" />
+                    <p className="text-sm text-muted-foreground">Click this area to upload</p>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-foreground text-sm md:text-base">Email ID *</Label>
+                <Label htmlFor="email" className="text-foreground">Email ID *</Label>
                 <Input
                   id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your.email@example.com"
-                  className="text-sm md:text-base"
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-foreground text-sm md:text-base">First name *</Label>
+                  <Label htmlFor="firstName" className="text-foreground">First name *</Label>
                   <Input
                     id="firstName"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="First name"
-                    className="text-sm md:text-base"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-foreground text-sm md:text-base">Last name</Label>
+                  <Label htmlFor="lastName" className="text-foreground">Last name</Label>
                   <Input
                     id="lastName"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Last name"
-                    className="text-sm md:text-base"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-foreground text-sm md:text-base">Phone Number *</Label>
+                  <Label htmlFor="phone" className="text-foreground">Phone Number *</Label>
                   <Input
                     id="phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="Phone number"
-                    className="text-sm md:text-base"
                   />
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="country" className="text-foreground text-sm md:text-base">Country</Label>
+                  <Label htmlFor="country" className="text-foreground">Country</Label>
                   <Select value={country} onValueChange={setCountry}>
-                    <SelectTrigger className="text-sm md:text-base">
+                    <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="India" className="text-sm md:text-base">India</SelectItem>
-                      <SelectItem value="United States" className="text-sm md:text-base">United States</SelectItem>
-                      <SelectItem value="United Kingdom" className="text-sm md:text-base">United Kingdom</SelectItem>
-                      <SelectItem value="Canada" className="text-sm md:text-base">Canada</SelectItem>
-                      <SelectItem value="Australia" className="text-sm md:text-base">Australia</SelectItem>
+                      <SelectItem value="India">India</SelectItem>
+                      <SelectItem value="United States">United States</SelectItem>
+                      <SelectItem value="United Kingdom">United Kingdom</SelectItem>
+                      <SelectItem value="Canada">Canada</SelectItem>
+                      <SelectItem value="Australia">Australia</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -260,13 +255,13 @@ const DrillbitReport = () => {
 
               <div className="flex items-center space-x-2">
                 <Checkbox id="terms" />
-                <Label htmlFor="terms" className="text-xs md:text-sm text-muted-foreground">
+                <Label htmlFor="terms" className="text-sm text-muted-foreground">
                   I have read the <span className="text-primary">Privacy Policy</span> and agree to the terms.
                 </Label>
               </div>
 
               <Button 
-                className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-2 md:py-3 text-sm md:text-base"
+                className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold py-3"
                 onClick={handleSubmit}
               >
                 Get Drillbit Report

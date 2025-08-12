@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { IndianRupee, DollarSign } from "lucide-react";
 
 interface PricingProps {
-  serviceType: "plagiarism-report" | "ai-report" | "drillbit-report" | "plagiarism-removal" | "general";
+  serviceType: "plagiarism-report" | "ai-report" | "drillbit-report" | "plagiarism-removal";
 }
 
 const PricingSection = ({ serviceType }: PricingProps) => {
@@ -71,25 +71,6 @@ const PricingSection = ({ serviceType }: PricingProps) => {
             { range: "11–20%", inr: "₹60", usd: "$1" }
           ],
           columns: ["Plagiarism (%)", "Cost (Per Page) (₹)", "Cost (Per Page) ($)"]
-        };
-      
-      case "general":
-        return {
-          title: "Service Pricing",
-          subtitle: "Flexible pricing for all academic services",
-          data: [
-            { range: "0–3", inr: "₹60", usd: "$1" },
-            { range: "4–6", inr: "₹80", usd: "$1" },
-            { range: "7–10", inr: "₹100", usd: "$2" },
-            { range: "11–15", inr: "₹120", usd: "$2" },
-            { range: "16–20", inr: "₹140", usd: "$3" },
-            { range: "21–40", inr: "₹160", usd: "$3" },
-            { range: "41–70", inr: "₹220", usd: "$5" },
-            { range: "71–100", inr: "₹240", usd: "$5" },
-            { range: "101–150", inr: "₹260", usd: "$7" },
-            { range: "150 plus", inr: "₹300", usd: "$7" }
-          ],
-          columns: ["No. of Pages", "INR (₹)", "USD ($)"]
         };
       
       default:
