@@ -261,13 +261,14 @@ const AIReport = () => {
       <FeaturesSection />
 
       {/* Pricing Section */}
-      <PricingSection serviceType="ai-detection" />
+      <PricingSection serviceType="ai-report" />
 
       {/* Captcha Modal */}
       <CaptchaModal
         isOpen={showCaptcha}
         onClose={() => setShowCaptcha(false)}
-        onVerify={handleFormSubmit}
+        onVerify={setCaptchaToken}
+        onSubmit={handleFormSubmit}
       />
     </div>
   );

@@ -56,17 +56,12 @@ const Index = () => {
   };
 
   const handleFormSubmit = async () => {
+    if (!captchaToken) return;
+    
     const formData = {
-      type: selectedService,
-      selectedService,
-      pages,
-      language,
+      type: selectedService || "general",
       email,
-      firstName,
-      lastName,
-      phone,
-      country,
-      file,
+      file: file || undefined,
       captchaToken
     };
 
@@ -354,7 +349,8 @@ const Index = () => {
       <CaptchaModal
         isOpen={showCaptcha}
         onClose={() => setShowCaptcha(false)}
-        onVerify={handleFormSubmit}
+        onVerify={setCaptchaToken}
+        onSubmit={handleFormSubmit}
       />
     </div>
   );

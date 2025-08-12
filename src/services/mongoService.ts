@@ -3,7 +3,7 @@
 
 export interface FormSubmission {
   _id?: string;
-  type: 'plagiarism-report' | 'plagiarism-removal' | 'ai-report' | 'drillbit-report';
+  type: 'plagiarism-report' | 'plagiarism-removal' | 'ai-report' | 'drillbit-report' | string;
   email: string;
   file?: File;
   fileName?: string;
