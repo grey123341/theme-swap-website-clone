@@ -1,6 +1,6 @@
-import { FileText } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -20,14 +20,8 @@ const Navigation = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <FileText className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">RESEARCH</h1>
-              <p className="text-sm text-primary font-semibold">ASSISTANT</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Research Assistant" className="h-12" />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-2">
