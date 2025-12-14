@@ -322,7 +322,7 @@ const PlagiarismReport = () => {
 
               {/* Privacy Checkbox */}
               <div className="flex items-center space-x-2">
-                <Checkbox id="terms" checked={privacy} onCheckedChange={setPrivacy} />
+                <Checkbox id="terms" checked={privacy} onCheckedChange={(checked) => setPrivacy(checked === true)} />
                 <Label htmlFor="terms" className="text-sm">
                   I agree to the <span className="text-primary">Privacy Policy</span> and agree to the terms.
                 </Label>
