@@ -1,5 +1,6 @@
-import { FileText, Mail, Phone, MapPin, Clock, Star } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <FileText className="w-6 h-6 text-primary-foreground" />
-              </div>
+              <img src={logo} alt="Research Assistant" className="h-10" />
               <div>
                 <h1 className="text-xl font-bold text-foreground">RESEARCH</h1>
                 <p className="text-sm text-primary font-semibold">ASSISTANT</p>
