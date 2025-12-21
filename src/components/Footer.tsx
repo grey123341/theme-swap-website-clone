@@ -10,12 +10,8 @@ const Footer = () => {
           
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <img src={logo} alt="Research Assistant" className="h-10" />
-              <div>
-                <h1 className="text-xl font-bold text-foreground">RESEARCH</h1>
-                <p className="text-sm text-primary font-semibold">ASSISTANT</p>
-              </div>
+            <div className="flex items-center">
+              <img src={logo} alt="Research Assistant" className="h-12" />
             </div>
             <p className="text-muted-foreground">
               Professional academic services with 24/7 support. Get expert assistance for plagiarism removal, AI reports, and more.
