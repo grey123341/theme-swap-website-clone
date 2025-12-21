@@ -10,8 +10,8 @@ const Footer = () => {
           
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <img src={logo} alt="Research Assistant" className="h-10" />
+            <div className="flex items-center gap-1">
+              <img src={logo} alt="Research Assistant" className="h-12" />
               <div>
                 <h1 className="text-xl font-bold text-foreground">RESEARCH</h1>
                 <p className="text-sm text-primary font-semibold">ASSISTANT</p>
