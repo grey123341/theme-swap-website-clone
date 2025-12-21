@@ -20,12 +20,8 @@ const Navigation = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Research Assistant" className="h-10" />
-            <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-foreground leading-tight">RESEARCH</h1>
-              <p className="text-xs text-primary font-semibold leading-tight">ASSISTANT</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Research Assistant" className="h-12" />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-2">
